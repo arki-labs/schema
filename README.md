@@ -1,4 +1,4 @@
-Read-only mirror of `@arki/schema` v0.3.0. Source and issues: arki-labs/arki. Docs: https://arki.dev/packages/schema. Published 2026-10-30 with provenance https://www.npmjs.com/package/@arki/schema/v/0.3.0#provenance.
+Read-only mirror of `@arki/schema` v0.3.1. Source and issues: arki-labs/arki. Docs: https://arki.dev/packages/schema. Published 2026-11-09 with provenance https://www.npmjs.com/package/@arki/schema/v/0.3.1#provenance.
 
 # @arki/schema
 
@@ -61,13 +61,13 @@ No Node or Bun built-ins are used. The table records the previous smoke run; rer
 
 <!-- runtimes:start -->
 
-| Runtime | Result  | Version tested        | Date (UTC) |
-| ------- | ------- | --------------------- | ---------- |
-| node    | pass    | v26.11.1              | 2026-10-17 |
-| bun     | pass    | 1.4.2                 | 2026-10-17 |
-| deno    | pass    | 2.9.7                 | 2026-10-17 |
-| browser | pass    | Chromium 156.0.8078.4 | 2026-10-17 |
-| hermes  | not run | -                     | 2026-10-17 |
+| Runtime | Result | Version tested        | Date (UTC) |
+| ------- | ------ | --------------------- | ---------- |
+| node    | pass   | v22.13.1              | 2026-11-05 |
+| bun     | pass   | 1.4.2                 | 2026-11-05 |
+| deno    | pass   | 2.9.8                 | 2026-11-05 |
+| browser | pass   | Chromium 156.0.8078.4 | 2026-11-05 |
+| hermes  | pass   | V1 250829098.0.17     | 2026-11-05 |
 
 <!-- runtimes:end -->
 
@@ -163,6 +163,10 @@ const Name = withJsonSchema(v.string(), { type: 'string' });
 if (!hasJsonSchema(Name)) throw new Error('expected JSON Schema');
 if (parse(Name, 'Ada') !== 'Ada') throw new Error('validation changed');
 ```
+
+## Observability
+
+Pure computation: no I/O, so no spans or metrics.
 
 ## Limits
 
